@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Form Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style18.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#mynavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand ml-3">
+                    <span style="color: chartreuse;"><b>CNC WEBWORLD</b></span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <span class="navbar-toggler-icon"></span>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">Products</a></li>
+                    <li><a href="#" class="nav-link">Training</a></li>
+                    <li><a href="#" class="nav-link">Services</a></li>
+                    <li><a href="#" class="nav-link">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-light">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                </ul>
+                <form action="" class="navbar-form navbar-right" method="post">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="search"><i
+                                    class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container">
+        <h1 class="text-success text-center">Contact Us</h1><br>
+        <div class="col-lg-8 auto">
+            <form action="#" id="myform" class="bg-light" method="post">
+                <div class="form-group">
+                    <label for="name">name:</label>
+                    <input type="text" class="form-control" value="" name="name" placeholder="Full Name">
+                    <span id="username" class="text-danger font-weight-bold"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" value="" name="email" placeholder="example@domian.com">
+                    <span id="emailid" class="text-danger font-weight-bold"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Conctact:</label>
+                    <input type="number" maxlength="10" class="form-control" value="" name="contact"
+                        placeholder="+911456789">
+                    <span id="phoneno" class="text-danger font-weight-bold"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Comments</label>
+                    <textarea name="comment" class="form-control" id="" style="resize: none;" cols="5"
+                        rows="5"></textarea>
+                    <span id="commentbox" class="text-danger font-weight-bold"></span>
+                </div>
+                <button type="submit" value="submit" class="btn btn-success btn-lg">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#myform').bootstrapValidator({
+                feedbackicons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                    ,
+                },
+                fields: {
+                    name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Name is required'
+                            },
+                            stringLength: {
+                                min: 4,
+                                max: 15,
+                                message: 'Name must be between 4 and 15 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z ]+$/,
+                                message: 'Name can only consist of alphabetical'
+                            }
+                        }
+                    },
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: "Please enter a valid email address"
+                            },
+                            emailAddress: {
+                                message: "email address must be a valid and should be provided"
+                            }
+
+                        }
+                    },
+
+                    Conctact: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Contact is required'
+                            },
+                            stringLength: {
+                                min: 10,
+                                max: 10,
+                                message: 'Contact must be 10 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[0-9]+$/,
+                                message: 'Contact can only consist of digits'
+                            },
+                            country: 'US',
+                            message: "Please enter a valid country code"
+                        }
+                    },
+
+                    Comments: {
+                        validators: {
+                            notEmpty: {
+                                message: "Comments are required"
+                            },
+                            stringLength: {
+                                min: 10,
+                                max: 200,
+                                message: 'Please enter at least 10 characters and not more than 200 characters'
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+        });
+    </script>
+</body>
+
+</html>

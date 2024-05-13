@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOm</title>
+</head>
+
+<body>
+    <h1 id="myheading">We are Learning DOM</h1>
+    <input type="button" value="Order here" onclick="hello1()">
+    <input type="button" value="Register Here" onclick="hello2()">
+    <input type="button" value="Purchase Here" onclick="hello3()">
+    <script>
+        function hello1() {
+            var a = document.getElementById('myheading');
+            a.style.color = "red";
+        }
+
+        function hello2() {
+            var b = document.getElementById('myheading');
+            b.style.color = "blue";
+        }
+
+        function hello3() {
+            var c = document.getElementById('myheading');
+            c.style.color = "green";
+
+        }
+
+
+    </script>
+</body>
+
+</html>

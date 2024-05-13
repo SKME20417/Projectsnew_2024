@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="mydiv1">
+        <h1>Full Stack Python Engineering</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, voluptatibus unde. Quia nesciunt, harum
+            voluptate molestias quas quo doloribus id odio maxime excepturi accusantium quod error quaerat impedit neque
+            sapiente.</p>
+    </div>
+    <div id="mydiv2">
+        <h1>Java Full Stack Engineering</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam possimus modi tempora repellendus facilis
+            sequi earum consectetur, aliquam doloribus ullam obcaecati voluptas voluptatem reiciendis unde? Dicta eaque
+            provident esse adipisci.</p>
+    </div>
+    <ul id="list">
+        <li>Pune</li>
+        <li>Mumbai</li>
+        <li class="myclass">Delhi</li>
+        <li class="myclass">Nagpur</li>
+        <li>Chennai</li>
+    </ul>
+    <script>
+        $(document).ready(function () {
+            // var x = $('#mydiv1').html();
+            // var y = $('#mydiv2').html();
+            // console.log(x);
+            // console.log(y);
+
+            // $('#list').css("color", "red");
+            // $('#list').css("border", "2px solid blue");
+            // $('#list li').css("border", "2px solid black");
+
+            // $('.myclass').css("color", "purple");
+            // $('.myclass').css("border", "2px solid blue");
+
+            //$('li:first').css("color", "red");
+            //$('li:last-child').css("border", "2px solid blue");
+            //$("*").css("border", "2px solid green");
+            //$("ul li:eq(3)").css("color", "purple");
+            //$('ul li:eq(2)').css("border", "2px solid green");
+
+            $("ul li:lt(1)").css("color", "yellow");
+            $("ul li:lt(2)").css("border", "2px solid blue");
+        })
+
+    </script>
+</body>
+
+</html>

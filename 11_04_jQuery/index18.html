@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Table disables in Jquery</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" disabled></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>User Name</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="login"></td>
+        </tr>
+        <tr></tr>
+    </table>
+    <script>
+        $(document).ready(function () {
+            $(':disabled').css("border", "5px solid red");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function test1104() {
+        //     document.write("This is a testing function....");
+        // }
+
+        // test1104();
+        // test1104();
+        // test1104();
+
+        // const f = (name) => {
+        //     document.write("I am  a python developer..." + name + "<br> ");
+        // }
+
+        // f('sanjay');
+        // f('sanju');
+        // f('kumar');
+        // f('skme');
+
+
+        // const g = function () {
+        //     document.write("I am machine learning engineer..." + "<br> ");
+        // }
+
+        // g();
+        // g();
+
+        // const y = (a, b) => a * b;
+
+        // var p = y(8, 9);
+        // document.write("product is :" + p);
+
+        // function hello1() {
+        //     console.log("Hello, its a hello 1 function ...");
+        // }
+
+        // function hello2() {
+        //     console.log("Hello, its a hello 2 function ...");
+        // }
+
+        // hello1();
+        // hello2();
+
+        // document.write("<br>");
+        // document.write("i new function is comming soon..");
+
+        // setTimeout(() => {
+        //     hello2();
+        // }, 4000);
+
+        // function greet(name, func) {
+        //     console.log("hello " + "my name is" + name);
+        //     func();
+        // }
+
+        // function hello15() {
+        //     console.log("hello i am acting as a call back function...");
+        // }
+
+        // setTimeout(() => {
+        //     greet('nishant', hello15);
+        // }, 5000);
+
+        function calculator(a, b, operator) {
+            return operator(a, b);
+        }
+
+        const add = calculator(5, 6, function (n1, n2) {
+            return n1 + n2;
+        })
+
+        //console.log("The sum is : " + add);
+
+        const subtract = calculator(14, 8, function (n1, n2) {
+            return n1 - n2;
+        })
+
+        //console.log("The difference is : " + subtract);
+
+        const multiply = calculator(8, 9, function (n1, n2) {
+            return n1 * n2;
+        })
+        //console.log("The product is : " + multiply);
+
+        const div = calculator(15, 3, function (n1, n2) {
+            return n1 / n2;
+        });
+
+        //console.log("The quotient is : " + div);
+
+        //console.log("the sum is : " + add);
+        //console.log("the difference is : " + subtract);
+        console.log("the product is : " + multiply);
+        console.log("the quotient is : " + div);
+
+        setTimeout(() => {
+            var addresult = calculator(8, 9, function (n1, n2) {
+                return n1 + n2;
+
+            })
+            console.log("the sum is : " + addresult);
+        }, 5000);
+
+        setTimeout(() => {
+            var subtractresult = calculator(18, 8, function (n1, n2) {
+                return n1 - n2;
+            });
+            console.log("the difference is : " + subtractresult);
+        }, 8000);
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex properties in CSS3</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            width: 100%;
+            height: 540px;
+            display: flex;
+            /* flex-direction: row; */
+            /* flex-wrap: wrap-reverse;
+            flex-flow: wrap; */
+            justify-content: center;
+            align-items: flex-start;
+            flex-flow: row;
+
+        }
+
+        .item {
+            background-color: powderblue;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 3px;
+            width: 200px;
+            height: 200px;
+        }
+
+        #item-1 {
+            /* order: 50; */
+            /* flex-grow: 3; */
+        }
+
+        #item-2 {
+            /* order: 30;
+            flex-basis: 800px; */
+            align-self: flex-start;
+        }
+
+        #item-3 {
+            /* order: 100; */
+            /* flex-grow: 4;
+            flex-shrink: 3; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="item-1">1st Block</div>
+        <div class="item" id="item-2">2nd Block</div>
+        <div class="item" id="item-3">3rd Block</div>
+        <div class="item" id="item-4">4th Block</div>
+        <div class="item" id="item-5">5th Block</div>
+        <div class="item" id="item-6">6th Block</div>
+    </div>
+</body>
+
+</html>

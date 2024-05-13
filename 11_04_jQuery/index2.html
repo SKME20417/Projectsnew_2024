@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery learning 2</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="mydiv1">
+        <h1>Jquery is a light weight js library</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid at, reprehenderit, aperiam consequatur
+            cupiditate harum cumque illo commodi quisquam nemo nesciunt rerum officiis impedit alias. Velit illo
+            cupiditate soluta culpa.</p>
+
+    </div>
+    <div id="mydiv2">
+        <h1>Jquery is very simple to learn</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi obcaecati placeat quia similique ullam
+            iure velit tempore repellendus mollitia officiis. Inventore beatae ratione quo, unde vero architecto aliquid
+            dolorum doloribus.</p>
+    </div>
+    <br><br>
+    <ul id="list">
+        <li>Pune</li>
+        <li>Mumbai</li>
+        <li>Delhi</li>
+        <li>Kolkata</li>
+        <li>Chennai</li>
+    </ul>
+    <script>
+        $(document).ready(function () {
+            var x = $('#mydiv1').html;
+            var y = $('#mydiv2').html;
+
+            console.log(x);
+            console.log(y);
+        })
+
+        $(document).ready(function () {
+            $('#list').css("color", "red");
+            $('#list').css("border", "2px solid blue")
+            $('#list li').css("border", "2px solid yellow");
+        })
+
+        
+
+
+    </script>
+</body>
+
+</html>

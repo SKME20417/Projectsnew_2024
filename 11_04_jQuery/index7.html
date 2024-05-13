@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+        integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="box" id="mydiv1">
+        <h1>java Full Stack Engineering</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur ipsam iusto velit dolores perspiciatis
+            deleniti, nihil magnam dolore soluta, eaque repellat perferendis deserunt mollitia corrupti sit fugit
+            dolorem ratione autem.</p>
+    </div>
+    <br><br>
+    <button id="mybtn">Click Me</button>
+
+    <script>
+        $(document).ready(function () {
+            var x = $('h1').text();
+            alert(x);
+        });
+
+        $(document).ready(function () {
+            $('#mybtn').click(function () {
+                $('#mydiv1 h1').text("This is Machine Learning System");
+
+                //$('#mydiv1 p').text("This is nothing just a jquery magic");
+
+                $('#mydiv1 p').html("<b> This is my web devolment</b>");
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

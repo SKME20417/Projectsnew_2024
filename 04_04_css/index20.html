@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in CSS</title>
+    <style>
+        :root {
+            --x: blue;
+            --y: yellow;
+            --z: pink;
+            --a: green;
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: var(--x);
+            border: 5px solid var(--y);
+            margin: 5px;
+            box-shadow: 3px 3px 3px var(--z);
+            position: relative;
+            animation-name: full_stack;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: ease-in-out;
+            animation-delay: 3s;
+            animation-direction: reverse;
+            animation: sanju 6s 3s 4 reverse backwards;
+
+        }
+
+        @keyframes full_stack {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 400px;
+            }
+        }
+
+        @keyframes sanju {
+            0% {
+                top: 0px;
+                left: 0px;
+
+            }
+
+            25% {
+                top: 250px;
+                left: 0px;
+            }
+
+            75% {
+                top: 250px;
+                left: 250px;
+            }
+
+            100% {
+                top: 0px;
+                left: 250px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1st Block</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 10_02_2024</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="myname" placeholder="Enter Your name">
+        <br>
+        <input type="button" value="Click Me" name="mybtn" onclick="hello()">
+    </form>
+
+    <script>
+        function hello() {
+            var a = document.getElementById('myname').value;
+            alert("Welcome to the course :" + a);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+console.log("hello deep learning")
+console.log('nlp')
+console.log("genefrative AI")
+console.log(78 * 369)
+console.clear()

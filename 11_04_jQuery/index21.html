@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Fade in J query</title>
+</head>
+
+<body>
+    <button>Click To Fade in</button>
+    <div id="div1" style="width: 80px; height: 80px; background-color: red; display: none;">
+
+    </div>
+    <div id="div1" style="width: 80px; height: 80px; background-color: green; display: none;">
+
+    </div>
+    <div id="div1" style="width: 80px; height: 80px; background-color: blue; display: none;">
+
+    </div>
+    <script>
+        // $(document).ready(function () {
+        //     $('button').click(function () {
+        //         console.log('Button clicked');
+        //         //$('#div1').fadeIn("slow");
+        //         //$('#div2').fadeIn(1000);
+        //         $('#div3').fadeIn(3000);
+        //     });
+        // });
+
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('#div1').fadeToggle("slow");
+            });
+        });
+
+    </script>
+</body>
+
+</html>

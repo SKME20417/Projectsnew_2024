@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svg</title>
+    <style>
+        .mydiv {
+            background-color: aquamarine;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .second {
+            transform: rotate(60deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        <svg viewBox="0 0 100 100">
+            <ellipse cx="50" cy="50" rx="20" ry="35" stroke="red" fill="blue"></ellipse>
+            <ellipse class="second" cx="50" cy="50" rx="20" ry="35" stroke="yellow" fill="green"> </ellipse>
+        </svg>
+    </div>
+</body>
+
+</html>

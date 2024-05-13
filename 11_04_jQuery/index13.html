@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Registraion Form 2</title>
+</head>
+
+<body>
+    Gender : <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <input type="radio" name="gender" value="Other">Other<br><br>
+    <input type="submit" value="GClick Me" id="gbtnid">
+    <div id="result"></div>
+    <div id="divskills"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#gbtnid').click(function () {
+                var gen = $('input[type="radio"]:checked');
+
+                if (gen.length > 0) {
+                    $('#result').html('You have selected ' + gen.val());
+                }
+                else {
+                    $('#result').html('No radio button has been clicked');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

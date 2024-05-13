@@ -1,0 +1,44 @@
+h1 {
+    color: yellow;
+    text-align: center;
+    background-color: black;
+
+}
+
+p.p1 {
+    color: green;
+    background-color: antiquewhite;
+}
+
+p.p2 {
+    color: blue;
+    background-color: azure;
+}
+
+p.p3 {
+    color: red;
+    background-color: antiquewhite;
+}
+
+p.p4 {
+    color: purple;
+    background-color: bisque;
+}
+
+p.p5 {
+    color: yellow;
+    background-color: blueviolet;
+}
+
+p.p6 {
+    color: pink;
+    background-color: black;
+}
+
+.a {
+    color: greenyellow;
+}
+
+.b {
+    color: gray;
+}

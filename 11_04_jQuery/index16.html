@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <label><input type="checkbox" name="skill" value="HTML">HTML</label>
+    <label><input type="checkbox" name="skill" value="CSS">CSS</label>
+    <label><input type="checkbox" name="skill" value="JavaScript">JavaScript</label>
+    <button id="sbtn">Show Skills</button>
+    <div id="divskill"></div>
+
+    <label><input type="checkbox" name="city" value="New York">New York</label>
+    <label><input type="checkbox" name="city" value="Los Angeles">Los Angeles</label>
+    <label><input type="checkbox" name="city" value="Chicago">Chicago</label>
+    <button id="cbtn">Show Cities</button>
+    <div id="divcity"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#sbtn').click(function () {
+                function1("skill");
+            });
+
+            $('#cbtn').click(function () {
+                function1('city');
+            });
+        });
+
+        var function1 = function (groupname) {
+            var result = $('input[name="' + groupname + '"]:checked');
+
+            if (result.length > 0) {
+                var r = result.length + " checkboxes checked <br>";
+                result.each(function () {
+                    r += $(this).val() + "<br>";
+                });
+                $('#div' + groupname).html(r);
+            } else {
+                $('#div' + groupname).html("No checkboxes have been selected");
+            }
+        };
+    </script>
+
+</body>
+
+</html>

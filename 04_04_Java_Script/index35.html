@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function hello() {
+        //     console.log("hello function todays!");
+        // }
+
+        // setTimeout(() => {
+        //     hello();
+        // }, 3000);
+
+        // console.log("Task1");
+        // console.log("Task2");
+        // setTimeout(() => {
+        //     console.log("Task3");
+        // }, 4000);
+        // console.log("Task4");
+
+        // function sum(x, y) {
+        //     console.log(x + y);
+        // }
+
+        // function calcifun(x, y, sumcallback) {
+        //     sumcallback(x, y);
+        // }
+
+        //calcifun(78, 20, sum);
+
+        // setInterval(() => {
+        //     calcifun(15, 30, sum)
+        // }, 5000);
+
+        // function getstudentRoll(roll) {
+        //     //console.log(roll);
+        //     setTimeout(() => {
+        //         console.log(roll);
+        //     }, 4000);
+        // }
+
+        // getstudentRoll(6);
+        // getstudentRoll(7);
+        // getstudentRoll(8);
+        // getstudentRoll(9);
+
+        function getStudentRoll(roll, getnextRoll) {
+            setTimeout(() => {
+                console.log(roll);
+                if (getnextRoll) {
+                    getnextRoll();
+                };
+            }, 3000);
+        };
+
+        getStudentRoll(1, () => {
+            console.log("Getting 2nd student data...");
+            getStudentRoll(2, () => {
+                console.log("Geeting 3rd Student data..");
+                getStudentRoll(3, () => {
+                    console.log("Geetingth studnet Data... ");
+                    getStudentRoll(4, () => {
+
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

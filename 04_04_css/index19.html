@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables and Grid Templates</title>
+    <style>
+        :root {
+            --x: green;
+            --y: red;
+            --z: blue;
+            --a: powderblue;
+            --c: blue;
+        }
+
+        .container {
+            /* --x: green; */
+            display: flex;
+            background-color: var(--a);
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: var(--x);
+            border: 5px solid var(--z);
+            margin: 5px;
+            box-shadow: 3px 3px 2px var(--y);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1st Block</div>
+        <div class="item">2nd Block</div>
+        <div class="item">3rd Block</div>
+    </div>
+
+</body>
+
+</html>

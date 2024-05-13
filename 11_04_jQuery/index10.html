@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <title>Css Function 3</title>
+    <style>
+        #mydiv {
+            border: 3px solid blue;
+            width: 300px;
+            height: 300px;
+            padding: 5px;
+        }
+
+        .first {
+            background-color: green;
+        }
+
+        .second {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv">
+        <h2>Machine Learning Engineering</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eum magnam ratione voluptas odit nihil quis
+            impedit accusamus possimus, tenetur illo quidem laborum necessitatibus quisquam ipsam molestiae delectus
+            suscipit adipisci!</p><br><br>
+        <button id="btn">Remove Events</button>
+
+    </div>
+    <br><br>
+    <button id="adbtn">Click Me</button><br><br>
+    <!-- <button id="btn">Remove Events</button> -->
+
+    <script>
+        // $(document).ready(function () {
+        //     $('#adbtn').click(function () {
+        //         $('#mydiv').css({ "background-color": "yellow", "color": "red", "border": "5px dotted green", "padding": "10px", "margin": "20px", "border-redius": "15px" });
+        //     });
+        // });
+
+        $(document).ready(function () {
+            $("#mydiv").on("mouseover", function () {
+                $(this).css({ "background-color": "yellow", "color": "red", "padding": "10px", "margin": "20px", "border": "5px dotted green" })
+
+            });
+
+            $('#mydiv').on("mouseout", function () {
+                $(this).css({ "background-color": "pink", "color": "yellow", "padding": "30px", "text-align": "center" });
+            });
+
+            $('#mydiv').on("click", function () {
+                $(this).css({ "background-color": "orange", "color": "black", "padding": "100px", "margin": "200px", "border": "15px dotted green" })
+            });
+
+            $('#btn').click(function () {
+                $("#mydiv").off("mouseout", "mouseover")
+            });
+
+            // $("#mydiv").on("click", function () {
+            //     $(this).toggleClass("first");
+            // });
+        })
+    </script>
+
+</body>
+
+</html>

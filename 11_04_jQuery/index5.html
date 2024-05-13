@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JQ</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .box {
+            border: 2px solid blue;
+            width: 300px;
+            min-height: 150px;
+            padding: 10px;
+            background-color: powderblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="mydiv1">
+        <h1>Python Full Stack Engineering</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam mollitia possimus, nesciunt deleniti
+            laboriosam odit assumenda repellendus. Aut quod exercitationem possimus temporibus sed, omnis, ratione
+            voluptatibus odit et ducimus quo.</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#mydiv1').click(function () {
+                $('.box').css('color', 'green');
+                $('.box').css("background", "yellow");
+            })
+
+            $('#mydiv1').dblclick(function () {
+                $('.box').css('color', 'red');
+                $('.box').css("background", "pink");
+            })
+
+            $('#mydiv1').contextmenu(function () {
+                $('.box').css('color', 'black');
+                $('.box').css("background", "blue");
+            })
+
+            $('#mydiv1').mouseenter(function () {
+                $('.box').css('color', 'yellow');
+                $('.box').css("background", "black");
+
+            })
+
+            $('#mydiv1').mouseleave(function () {
+                $('.box').css("color", "pink");
+                $('.box').css("background", "violet");
+            })
+
+            // $('body').keypress(function () {
+            //     $(this).css("background", "yellow");
+            // })
+
+            $('body').keyup(function () {
+                $(this).css("background", "pink");
+            })
+
+            $('body').keydown(function () {
+                $(this).css("background", "blue");
+            })
+
+        });
+    </script>
+
+</body>
+
+</html>

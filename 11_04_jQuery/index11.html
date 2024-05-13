@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Append and prepend in Jquery</title>
+</head>
+
+<body>
+    <div id="mydiv">
+        <h2>Deep Learning</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt quas dolores temporibus hic! Suscipit
+            maiores, iste eaque voluptatem vitae doloribus, obcaecati vero laudantium fugiat porro perferendis quidem
+            eum enim nostrum?</p>
+    </div>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Java Script</li>
+        <li>Machine Learning</li>
+        <li>Deep Learning</li>
+    </ol>
+    <br><br>
+    <button id="abtn">Append</button>
+    <button id="pbtn">Prepend</button>
+    <button id="btn">Click me</button>
+    <script>
+        // $(document).ready(function () {
+        //     $('#abtn').click(function () {
+        //         $("#mydiv").append("<h3>We are front end engineers!</h3>");
+        //         // $('ol').append('<li> Bootstarp </li>');
+        //         $('ol').after('<li> jquery </li>');
+        //     });
+
+        //     $('#pbtn').click(function () {
+        //         $('#mydiv').prepend("<h1>We are full Stack Engineers!</h1>");
+        //         // $('ol').prepend('<li> Python </li>');
+        //         $('ol').before('<li> AWS </li>');
+
+        //     });
+        //})
+
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('#mydiv p').empty();
+            });
+        })
+    </script>
+
+
+
+</body>
+
+</html>

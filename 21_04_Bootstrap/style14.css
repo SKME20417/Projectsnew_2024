@@ -1,0 +1,16 @@
+.container {
+    border: 5px solid black;
+}
+
+.nav {
+    background-color: rgb(202, 202, 238);
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    background: yellow;
+}

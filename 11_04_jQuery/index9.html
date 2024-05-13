@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vss Functions 2</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+        integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <style>
+        .box {
+            border: 2px solid blue;
+            width: 300px;
+            height: 300px;
+            padding: 5px;
+        }
+
+        .first {
+            background-color: blue;
+        }
+
+        .second {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="mydiv">
+        <h2>Python Full Stack Engineering</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quibusdam maiores dolorum fugit hic iusto
+            consectetur sunt est, nesciunt error commodi recusandae! Impedit, non beatae expedita sed consequatur veniam
+            numquam?</p>
+    </div>
+    <br><br>
+    <button id="addbtn">Add Class</button>
+    <button id="rmbtn">Remove Class</button>
+    <button id="tgbtn">Toggle Class</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#addbtn").click(function () {
+                $("#mydiv").addClass("first second")
+            });
+
+            $('#rmbtn').click(function () {
+                $('#mydiv').removeClass("first")
+            });
+
+            $('#tgbtn').click(function () {
+                $('#mydiv').toggleClass("first")
+            });
+        })
+    </script>
+
+</body>
+
+</html>

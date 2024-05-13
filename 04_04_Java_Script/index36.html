@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let promise = new Promise((resolve, reject) => {
+        //     console.log("I am a promise...");
+        //     resolve("successfully resolved...");
+        //     reject("something is not right...");
+        // });
+
+        // function getstudentRoll(roll) {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             console.log("Roll is : " + roll);
+        //             //resolve("successfully resolved now");
+        //             reject("Network Error...");
+        //         }, 5000);
+        //     });
+        // };
+
+        // const hello = () => {
+        //     return new Promise((resolve, reject) => {
+        //         console.log("I am a promise... new");
+        //         //resolve("All done...");
+        //         reject("404 Errro...");
+        //     });
+        // };
+
+        // let p1 = hello();
+        // p1.then((res) => {
+        //     console.log("Promise Fulfilled....", res);
+        // });
+
+        // p1.catch((err) => {
+        //     console.log("Rejected completely....", err);
+        // })
+
+        // function getstudentRoll(roll) {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             console.log(roll);
+        //             resolve("Success....finish..");
+        //         }, 2000);
+        //     });
+        // };
+
+        // getstudentRoll(1).then((res) => {
+        //     getstudentRoll(2).then((res) => {
+        //         getstudentRoll(3).then((res) => {
+        //             getstudentRoll(4).then((res))
+        //         })
+        //     })
+        // })
+
+        // let t1 = getstudentRoll(1);
+        // t1.then((res) => {
+        //     console.log(res);
+        //     let t2 = getstudentRoll(2);
+        //     t2.then((res) => {
+        //         console.log(res);
+        //         let t3 = getstudentRoll(3);
+        //         t3.then((res) => {
+        //             console.log(res);
+        //             let t4 = getstudentRoll(4);
+        //             t4.then((res) => {
+        //                 console.log(res);
+        //             });
+        //         });
+        //     });
+        // });
+        // let t2 = getstudentRoll(2);
+        // t2.then((res) => {
+        //     console.log(res);
+        // })
+
+        // let t3 = getstudentRoll(3);
+        // t3.then((res) => {
+        //     console.log(res);
+        // })
+
+        // let t4 = getstudentRoll(4);
+        // t4.then((res) => {
+        //     console.log(res);
+        // })
+
+        // let t5 = getstudentRoll(5);
+        // t5.then((res) => {
+        //     console.log(res);
+        // })
+
+        // async function hello() {
+        //     console.log("Its a brand new function...");
+        // };
+
+        function getRoadMap() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Road Map is ready...");
+                    resolve("Follow your roadmap...");
+                }, 3000);
+            });
+
+        };
+
+        async function getMap() {
+            await getRoadMap();
+        }
+
+
+    </script>
+</body>
+
+</html>

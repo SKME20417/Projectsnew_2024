@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Toggle in jquery</title>
+</head>
+
+<body>
+    City : <select name="" id="myselect">
+        <option value="Pune">Pune</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Nagpur">Nagpur</option>
+        <option value="Kanpur">Kanpur</option>
+        <option value="Delhi">Delhi</option>
+    </select>
+    <br><br>
+    <div id="mydiv">
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#myselect').change(function () {
+                var s = $('option:selected');
+                $('#mydiv').html('Text ' + s.text());
+                //$('#mydiv').html('Value : ' + s.val());
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

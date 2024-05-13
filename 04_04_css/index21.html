@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        :root {
+            --x: red;
+            --y: blue;
+        }
+
+        .container {
+            display: grid;
+            /* grid-template-columns: repeat(4, auto); */
+            /* grid-gap: 50px; */
+            /* grid-template-rows: 1fr 1fr 4fr; */
+            /* grid-auto-rows: 5fr; */
+            grid-template-columns: 1fr 4fr;
+            grid-gap: 2rem;
+            grid-column-gap: 10rem;
+        }
+
+        .item {
+            background-color: var(--x);
+            margin: 5px;
+            padding: 5px;
+            border: 2px solid var(--y);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="item-1">1st Block</div>
+        <div class="item" id="item-2">2nd Block</div>
+        <div class="item" id="item-3">3rd Block</div>
+        <div class="item" id="item-4">4th Block</div>
+        <div class="item" id="item-5">5th Block</div>
+        <div class="item" id="item-6">6th Block</div>
+        <div class="item" id="item-7">7th Block</div>
+        <div class="item" id="item-8">8th Block</div>
+        <div class="item" id="item-9">9th Block</div>
+    </div>
+
+</body>
+
+</html>

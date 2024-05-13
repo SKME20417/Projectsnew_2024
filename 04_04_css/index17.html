@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #mydiv {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            /* transition-property: background-color, width, height;
+            transition-duration: 2s, 4s, 3s;
+            transition-delay: 5s;
+            transition-timing-function: ease-in-out; */
+            /* transition: width, height, background-color, 4s, 6s, 8s, 2s, 2s, 2s; */
+            /* transition: all 10s; */
+            transition: all;
+            transition-duration: 3s;
+            transition-timing-function: steps(6);
+            transition-delay: 5s;
+
+
+        }
+
+        #mydiv:hover {
+            background-color: white;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Python Full Stack Engineering</h2>
+    <div id="mydiv">
+
+    </div>
+
+</body>
+
+</html>

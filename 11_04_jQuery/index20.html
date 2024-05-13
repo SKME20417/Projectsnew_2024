@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <p>If you click on me I will disappear</p>
+    <p>Click Me away</p>
+    <p>Click me Too!!</p>
+    <p>If you click on Hide button I will disappear!!</p>
+    <button id="hidebtn">Hide</button>
+    <button id="showbtn">Show</button>
+    <button id="btn">Hide/Show</button>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic architecto quasi magni recusandae quae consequuntur
+        rem ullam pariatur dolor laudantium at, animi sit doloribus saepe minus aspernatur voluptatibus. Minima,
+        placeat.</p>
+    <p>Molestias accusantium reiciendis mollitia. Aspernatur eos quis nobis reprehenderit porro vero illo? Laboriosam,
+        voluptas. Nam, eum odio, repellendus vel omnis itaque cupiditate corporis maiores magnam incidunt facilis non
+        pariatur? Enim?</p>
+
+    <script>
+        // $(document).ready(function () {
+        //     $('p').on('click', function () {
+        //         $(this).hide();
+        //     });
+        // });
+
+        // $(document).ready(function () {
+        //     $('#hidebtn').on("click", function () {
+        //         $('p').hide();
+        //     });
+
+        //     $('#showbtn').click(function () {
+        //         $('p').show();
+        //     })
+        // });
+        $(document).ready(function () {
+            $('#btn').on("click", function () {
+                $('p').toggle();
+            })
+        });
+    </script>
+</body>
+
+</html>

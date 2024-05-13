@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Registraion Form</title>
+</head>
+
+<body>
+    <h2>Registraion Form</h2>
+
+    First Name : <input type="text" value="Pooja"><br><br>
+    Last Name : <input type="text" value="Sharma"><br><br>
+    Gender : <input type="radio" name="gen" value="Male" checked>Male
+    <input type="radio" name="gen" value="Female">Female
+    <input type="radio" name="gen" value="Other">Other<br><br>
+    Skills : <input type="checkbox" name="skill" value="Python" checked>Python
+    <input type="checkbox" name="skill" value="Java" checked="checked">Java
+    <input type="checkbox" name="skill" value="C++" checked>C++
+    <input type="checkbox" name="skill" value="HTML">HTML
+    <input type="checkbox" name="skill" value="CSS">CSS
+    <input type="checkbox" name="skill" value="JavaScript">JavaScript
+    <input type="checkbox" name="skill" value="PHP" checked>PHP
+    <br><br>
+    Country : <select name="" id="">
+        <option value="India">India</option>
+        <option selected value="Pakistan">Pakistan</option>
+        <option value="Japan">Japan</option>
+        <option value="Usa">Usa</option>
+        <option value="Uk">Uk</option>
+    </select><br><br>
+    summary :
+    <br>
+    <textarea name="" id="" cols="30" rows="10">This is what we are looking for</textarea>
+    <br><br>
+    <input type="submit" value="Click Me">
+
+    <script>
+        $(document).ready(function () {
+            // $(':input').each(function () {
+            //     alert($(this).val());
+            // });
+            $('input[type = "text"]').each(function () {
+                alert($(this).val());
+            });
+        });
+    </script>
+</body>
+
+</html>

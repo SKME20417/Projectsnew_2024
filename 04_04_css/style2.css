@@ -1,0 +1,11 @@
+body {
+    background-color: powderblue;
+}
+
+h1,
+h2,
+p {
+    color: red;
+    background-color: blue;
+    text-align: center;
+}

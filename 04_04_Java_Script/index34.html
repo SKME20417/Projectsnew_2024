@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set/call</title>
+</head>
+
+<body>
+    <script>
+        function calculator(a, b, operator) {
+            return operator(a, b);
+        }
+
+        var add = (a, b) => a + b;
+        var addresult = calculator(8, 4, add);
+        console.log("The sum is : " + addresult);
+        var subs = (a, b) => a - b;
+        var subresult = calculator(8, 4, subs);
+        console.log("The difference is : " + subresult);
+        var mul = (a, b) => a * b;
+
+        setTimeout(() => {
+            var mulresult = calculator(8, 4, mul);
+            console.log("The product is : " + mulresult);
+        }, 8000);
+
+        var div = (a, b) => a / b;
+
+        setTimeout(() => {
+            var divresult = calculator(8, 4, div);
+            console.log("The quotient is : " + divresult);
+        }, 9000);
+
+        // document.write("The addition is : " + calculator(8, 9, add) + "<br>");
+        // document.write("The subtraction is : " + calculator(8, 9, subs) + "<br>");
+        // document.write("The multiplication is : " + calculator(8, 9, mul) + "<br>");
+        // document.write("The division is : " + calculator(8, 9, div) + "<br>");
+
+
+
+    </script>
+
+</body>
+
+</html>

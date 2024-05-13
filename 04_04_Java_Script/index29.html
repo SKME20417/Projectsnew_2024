@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert and confirm</title>
+</head>
+
+<body>
+    <div id="mydiv">
+        <form action="">
+            <input type="text" placeholder="Enter Your Name" name='name'><br><br>
+            <input type="email" placeholder="Enter Your email" name="email"><br><br>
+            <input type="password" placeholder="Enter your password" name="pass"><br><br>
+            <input type="number" placeholder="Enter your age" name="age"><br><br>
+            <input type="submit" value="Click ME" name="mybtn" onclick="testingfun()">
+        </form>
+    </div>
+    <script>
+        function testingfun() {
+            var c = confirm("are you really want to submit your details ?");
+            if (c == true) {
+                alert("Your details have been submitted");
+            }
+            else {
+                alert("you havent filled your form");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <form action="" id="myform">
+        Name : <input type="text" id="name"><br><br>
+        Email : <input type="email" id="email"><br><br>
+        City : <select name="" id="city">
+            <option value="Select Your city"></option>
+            <option value="Pune">Pune</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Kolkata">Kolkata</option>
+        </select>
+        <div id="show">
+
+        </div>
+        <br><br>
+        <input type="submit" value="Click Me" id="submit"><br><br>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $('#name, #email, #city').focus(function () {
+                $(this).css("background-color", "yellow");
+            });
+
+            $('#name, #email, #city').blur(function () {
+                $(this).css("background-color", "");
+            });
+
+            $('#city').change(function () {
+                var x = $(this).val();
+                alert("You stay in the city : " + x);
+                $('#show').html(x);
+            });
+        });
+
+        $(document).ready(function () {
+            $('#name, #email').select(function () {
+                $(this).css("background-color", "blue");
+            });
+        });
+
+        $(document).ready(function () {
+            $('#myform').submit(function () {
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var city = $('#city').val();
+
+                alert("Hello" + name + "Your email id is " + email + "and you stay in" + city);
+            })
+        })
+    </script>
+
+</body>
+
+</html>

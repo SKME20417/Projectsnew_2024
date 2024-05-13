@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>control flow switch</title>
+</head>
+
+<body>
+    <script>
+        var marks = prompt("Enter your marks : ");
+
+        switch (true) {
+            case marks >= 90:
+                document.write("Your grade is : A , and your marks are : " + marks);
+                break;
+
+            case marks >= 80:
+                document.write("Your grade is : B , and your marks are : " + marks);
+                break;
+
+            case marks >= 70:
+                document.write("Your grade is : C , and your marks are : " + marks);
+                break;
+
+            case marks >= 60:
+                document.write("Your grade is : D , and your marks are : " + marks);
+                break;
+
+            default:
+                document.write("Your grade is : F-failed , and your marks are : " + marks);
+                break;
+        }
+    </script>
+</body>
+
+</html>

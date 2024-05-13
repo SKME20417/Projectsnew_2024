@@ -1,0 +1,13 @@
+.day {
+    background-color: #ffffff;
+    /* white background during the day */
+    color: #000000;
+    /* black text during the day */
+}
+
+.night {
+    background-color: #000000;
+    /* black background during the night */
+    color: #ffffff;
+    /* white text during the night */
+}

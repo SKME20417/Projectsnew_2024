@@ -1,0 +1,13 @@
+body {
+    background-color: yellowgreen;
+}
+
+.card-text {
+    color: green;
+    font-weight: bold;
+    font-weight: 800;
+}
+
+.card-title {
+    font-weight: 900px;
+}
